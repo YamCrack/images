@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '--build-arg', 'NGINX_VERSION=1.23.2', '-t', 'us-west2-docker.pkg.dev/$PROJECT_ID/weserv-repo/weserv-image:5x', '-f', 'docker/Dockerfile', '.' ]
+images:
+- 'us-west2-docker.pkg.dev/$PROJECT_ID/weserv-repo/weserv-image:5x'
